@@ -1,0 +1,113 @@
+{
+  "timeline_index": 31,
+  "planner": {
+    "Team Leader": {
+      "1": {
+        "task_id": "1",
+        "dependent_task_ids": [],
+        "instruction": "Analyser le CV et les informations fournies pour extraire les données nécessaires au portfolio.",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "David",
+        "start_at": 1749770686.6524303,
+        "end_at": 1749770852.0584533
+      },
+      "current_task_id": "2",
+      "2": {
+        "task_id": "2",
+        "dependent_task_ids": [
+          "1"
+        ],
+        "instruction": "Développer un portfolio web professionnel et responsive pour présenter le profil de développeur selon les spécifications.",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "Alex",
+        "start_at": 1749770852.0584953,
+        "end_at": 1749771113.2652528
+      }
+    },
+    "Data Analyst": {
+      "1": {
+        "task_id": "1",
+        "dependent_task_ids": [],
+        "instruction": "Extract and structure all information from Rayan Biad's CV and the provided message into a comprehensive dataset.",
+        "task_type": "data preprocessing",
+        "code": "\nimport json\nimport re\n\n# Collect information from the CV scan and the message\ncv_scan_text = \"\"\"BIAD RAYAN\nIngénieur d'état en Informatique / Software Engineer à la recherche active\nd'une nouvelle expérience professionnelle\n@rayanabiad@gmail.com /envel⌢peN6 Imm18 Lot Miftah Esaada Bettana-Salé\n♂¶ap-¶arkerMaroc , Rabat-Salé /linkedinrbiad ♂phone+212 (0) 6 28 22 52 55\nÉDUCATION\nDiplôme d'Ingénieur en Informatique\nEMSI-Ecole Marocaine des Sciences de l'Ingénieur\nὌ52018 - 2023 ♂¶ap-¶arkerRabat, Maroc\nBaccalauréat Internationnal Scientiﬁque\nLycée Louis Le Grand\nὌ52016-2017 ♂¶ap-¶arkerRabat, Maroc\nEXPÉRIENCES PROFESSIONNELLES\nDéveloppeur Full-Stack\nCDI - Capgemini\nὌ502/2024 - 06/2024 ♂¶ap-¶arkerCasablanca, Maroc\n•Conception et développement d'une application web résponsive à la\ngestion du tournoi Football de Capgemini au sein d'une équipe\n•Participation à un hackathon interne au sein d'une équipe\n•Formation certiﬁée en Java Spring Boot et Angular\n•Outils : Springboot Angular GitLab Figma\nTesteur Logiciel - QA\nCDD - Alee Conseil\nὌ509/2023 - 02/2024 ♂¶ap-¶arkerRabat, Maroc\n•Exécution de scénarios de test avec Cypress pour plusieurs fonctionnal-\nités d'un site e-commerce\n•Collaboration étroite avec les équipes de développement pour assurer la\nqualité et la fonctionnalité des livrables\n•Formation sur Cypress, Postman et Git\n•Outils : Cypress Git GitHub Postman\nDéveloppeur Full-Stack\nPFE - Fininfo Solutions\nὌ503/2023 - 09/2023 ♂¶ap-¶arkerTunis, Tunisie\n•Contribution à un projet bancaire en tant que développeur full stack\n•Suivi de formations sur Spring Cloud , Kafka , et les architectures mi-\ncroservices\n•Résolution de problèmes et développement d'interfaces UX et UI\n•Outils : Spring boot ReactJS Docker Azure TFS Apache KafkaCERTIFICATIONS\nThe 21th Century Skills Certiﬁcate\nDélivrée par Honoris Online Academy\nὌ52021 - 2022 ♂¶ap-¶arkerEMSI, Rabat\nAﬃcher la certiﬁcation\nJava Certiﬁcate\nDélivrée par CodinGame\nὌ510 / 2024 ♂¶ap-¶arkerRabat , Maroc\n•ID du diplôme : EnkEBXNYRKXvLS68Ogzojw\nAﬃcher la certiﬁcation\nTCF - TP\nDélivrée par L'institut Français\nὌ511 / 2024 ♂¶ap-¶arkerRabat , Maroc\n•Niveau - C1\nCOMPÉTENCES/OUTILS\n•Languages de programmation : C C++\nJavaScript Java Python Dart\n•Frameworks: Spring Spring Boot Angular\nReact JS DotNet Flutter Cypress\nSelenium\n•Base de données : SQL PL/SQL SQLServer\nPowerBI PostgreS\n•CI/CD: GitLab Git Docker Azure DevOps\nSonarQube\n•Operating systems : Window Linux\n•Soft Skills : Agilité Négociation Prise de décision\nLANGUES\nArabe ○ ○ ○ ○ ○\nFrancais ○ ○ ○ ○ ○\nAnglais ○ ○ ○ ○ ○\"\"\"\n\n# Message additional information about projects\nmessage_info = \"\"\"\n🎯 Objectif du portfolio\nCréer un support clair et visuellement professionnel pour valoriser mon profil technique dans le cadre de futures opportunités (emplois, missions freelance, collaborations). Le portfolio doit inclure les projets clés, les compétences techniques, ainsi que les outils et frameworks maîtrisés.\n\n👨‍💻 Profil & compétences techniques\nLangages & frameworks :\n\nBackend : Java avec Spring Boot (REST API, sécurité, gestion des entités JPA/Hibernate, JWT, etc.)\n\nFrontend : Angular, React (routing, composants réactifs, gestion d'état, services, etc.)\n\nBase de données : MySQL, PostgreSQL (modélisation, requêtes, relations JPA)\n\nTesting :\n\nEnd-to-End : Cypress (automatisation des tests sur site e-commerce)\n\nAPI : Postman\n\nUnitaires : JUnit, Mockito (tests sur services et contrôleurs Spring)\n\nOutils & DevOps : Git, GitHub, GitLab, Maven, Postman, Jira\n\nMéthodologies : Agile (Scrum), TDD (Test Driven Development)\n\n🧠 Expériences & projets clés à intégrer\n1. Capgemini – Projet de gestion de tournois de football (Ramadan)\nContexte : Réalisé avec une équipe de 30 développeurs pendant ma période d'essai.\n\nRôle : Conception et développement fullstack\n\nContributions :\n\nÉlaboration du diagramme de classes et conception de l'architecture technique\n\nDéveloppement d'un formulaire d'inscription (Angular + Spring Boot)\n\nInterface de gestion des matchs (CRUD complet, affichage dynamique)\n\nMise en place du système d'authentification (Spring Security + JWT)\n\nStack : Java, Spring Boot, Angular, MySQL, Git\n\n2. Alee Conseil – Testeur logiciel (CDD)\nFormation interne sur Cypress, Postman, Git\n\nAutomatisation de scénarios de test sur un site e-commerce\n\nRédaction et exécution de tests fonctionnels et régressifs\n\nCollaboration étroite avec les développeurs pour la résolution de bugs\n\nStack : Cypress, JavaScript, Git, Postman, Jira\n\n3. Hackathon – Application collaborative\nDesign UX de l'application\n\nParticipation à la définition des fonctionnalités et de la roadmap\n\nStack : Figma, Angular, coordination en équipe agile\n\"\"\"\n\n# Structure the personal information\npersonal_info = {\n    \"name\": \"Rayan Biad\",\n    \"title\": \"Ingénieur d'état en Informatique / Software Engineer\",\n    \"email\": \"rayanabiad@gmail.com\",\n    \"phone\": \"+212 (0) 6 28 22 52 55\",\n    \"location\": \"Rabat-Salé, Maroc\",\n    \"linkedin\": \"rbiad\",\n    \"about\": \"Profil hybride combinant développement fullstack et testing, spécialisé en Java Spring Boot, Angular et React, avec une expertise en automatisation de tests. À la recherche active d'une nouvelle expérience professionnelle.\"\n}\n\n# Structure the education information\neducation = [\n    {\n        \"degree\": \"Diplôme d'Ingénieur en Informatique\",\n        \"institution\": \"EMSI-Ecole Marocaine des Sciences de l'Ingénieur\",\n        \"period\": \"2018 - 2023\",\n        \"location\": \"Rabat, Maroc\"\n    },\n    {\n        \"degree\": \"Baccalauréat International Scientifique\",\n        \"institution\": \"Lycée Louis Le Grand\",\n        \"period\": \"2016 - 2017\",\n        \"location\": \"Rabat, Maroc\"\n    }\n]\n\n# Structure the work experience information from both CV and message\nexperiences = [\n    {\n        \"title\": \"Développeur Full-Stack\",\n        \"company\": \"Capgemini\",\n        \"type\": \"CDI\",\n        \"period\": \"02/2024 - 06/2024\",\n        \"location\": \"Casablanca, Maroc\",\n        \"project_name\": \"Projet de gestion de tournois de football (Ramadan)\",\n        \"project_description\": \"Application web responsive pour la gestion du tournoi Football de Capgemini\",\n        \"team_size\": \"30 développeurs\",\n        \"role\": \"Conception et développement fullstack\",\n        \"responsibilities\": [\n            \"Élaboration du diagramme de classes et conception de l'architecture technique\",\n            \"Développement d'un formulaire d'inscription (Angular + Spring Boot)\",\n            \"Interface de gestion des matchs (CRUD complet, affichage dynamique)\",\n            \"Mise en place du système d'authentification (Spring Security + JWT)\",\n            \"Participation à un hackathon interne au sein d'une équipe\",\n            \"Formation certifiée en Java Spring Boot et Angular\"\n        ],\n        \"technologies\": [\"Java\", \"Spring Boot\", \"Angular\", \"MySQL\", \"GitLab\", \"Figma\", \"JWT\"]\n    },\n    {\n        \"title\": \"Testeur Logiciel - QA\",\n        \"company\": \"Alee Conseil\",\n        \"type\": \"CDD\",\n        \"period\": \"09/2023 - 02/2024\",\n        \"location\": \"Rabat, Maroc\",\n        \"project_description\": \"Tests automatisés sur un site e-commerce\",\n        \"responsibilities\": [\n            \"Exécution de scénarios de test avec Cypress pour plusieurs fonctionnalités d'un site e-commerce\",\n            \"Collaboration étroite avec les équipes de développement pour assurer la qualité et la fonctionnalité des livrables\",\n            \"Formation sur Cypress, Postman et Git\",\n            \"Automatisation de scénarios de test sur un site e-commerce\",\n            \"Rédaction et exécution de tests fonctionnels et régressifs\",\n            \"Collaboration étroite avec les développeurs pour la résolution de bugs\"\n        ],\n        \"technologies\": [\"Cypress\", \"JavaScript\", \"Git\", \"GitHub\", \"Postman\", \"Jira\"]\n    },\n    {\n        \"title\": \"Développeur Full-Stack\",\n        \"company\": \"Fininfo Solutions\",\n        \"type\": \"PFE\",\n        \"period\": \"03/2023 - 09/2023\",\n        \"location\": \"Tunis, Tunisie\",\n        \"project_description\": \"Projet bancaire\",\n        \"responsibilities\": [\n            \"Contribution à un projet bancaire en tant que développeur full stack\",\n            \"Suivi de formations sur Spring Cloud, Kafka, et les architectures microservices\",\n            \"Résolution de problèmes et développement d'interfaces UX et UI\"\n        ],\n        \"technologies\": [\"Spring Boot\", \"ReactJS\", \"Docker\", \"Azure\", \"TFS\", \"Apache Kafka\"]\n    },\n    {\n        \"title\": \"Participant\",\n        \"company\": \"Hackathon\",\n        \"type\": \"Projet\",\n        \"project_name\": \"Application collaborative\",\n        \"responsibilities\": [\n            \"Design UX de l'application\",\n            \"Participation à la définition des fonctionnalités et de la roadmap\"\n        ],\n        \"technologies\": [\"Figma\", \"Angular\", \"Coordination en équipe agile\"]\n    }\n]\n\n# Structure the certifications\ncertifications = [\n    {\n        \"name\": \"The 21th Century Skills Certificate\",\n        \"issuer\": \"Honoris Online Academy\",\n        \"date\": \"2021 - 2022\",\n        \"location\": \"EMSI, Rabat\"\n    },\n    {\n        \"name\": \"Java Certificate\",\n        \"issuer\": \"CodinGame\",\n        \"date\": \"10/2024\",\n        \"location\": \"Rabat, Maroc\",\n        \"id\": \"EnkEBXNYRKXvLS68Ogzojw\"\n    },\n    {\n        \"name\": \"TCF - TP\",\n        \"issuer\": \"L'institut Français\",\n        \"date\": \"11/2024\",\n        \"location\": \"Rabat, Maroc\",\n        \"level\": \"C1\"\n    }\n]\n\n# Structure the skills from both CV and message\nskills = {\n    \"backend\": [\n        {\"name\": \"Java\", \"details\": \"Spring Boot, REST API, sécurité, JPA/Hibernate, JWT\"},\n        {\"name\": \"Spring\", \"details\": \"Spring Boot, Spring Security, Spring Cloud\"},\n        {\"name\": \"C/C++\"},\n        {\"name\": \"Python\"}\n    ],\n    \"frontend\": [\n        {\"name\": \"Angular\", \"details\": \"Routing, composants réactifs, gestion d'état, services\"},\n        {\"name\": \"React\", \"details\": \"Routing, composants réactifs, gestion d'état, services\"},\n        {\"name\": \"JavaScript\"},\n        {\"name\": \"Dart\", \"details\": \"Flutter\"}\n    ],\n    \"database\": [\n        {\"name\": \"MySQL\"},\n        {\"name\": \"PostgreSQL\", \"details\": \"Modélisation, requêtes, relations JPA\"},\n        {\"name\": \"SQL/PL/SQL\"},\n        {\"name\": \"SQLServer\"},\n        {\"name\": \"PowerBI\"}\n    ],\n    \"testing\": [\n        {\"name\": \"Cypress\", \"details\": \"End-to-End testing, automatisation des tests sur site e-commerce\"},\n        {\"name\": \"Postman\", \"details\": \"API testing\"},\n        {\"name\": \"JUnit\", \"details\": \"Tests unitaires sur services et contrôleurs Spring\"},\n        {\"name\": \"Mockito\", \"details\": \"Tests unitaires sur services et contrôleurs Spring\"},\n        {\"name\": \"Selenium\"}\n    ],\n    \"devops\": [\n        {\"name\": \"Git\"},\n        {\"name\": \"GitHub\"},\n        {\"name\": \"GitLab\"},\n        {\"name\": \"Maven\"},\n        {\"name\": \"Jira\"},\n        {\"name\": \"Docker\"},\n        {\"name\": \"Azure DevOps\"},\n        {\"name\": \"SonarQube\"}\n    ],\n    \"methodologies\": [\n        {\"name\": \"Agile\", \"details\": \"Scrum\"},\n        {\"name\": \"TDD\", \"details\": \"Test Driven Development\"}\n    ],\n    \"operating_systems\": [\n        {\"name\": \"Windows\"},\n        {\"name\": \"Linux\"}\n    ],\n    \"soft_skills\": [\n        {\"name\": \"Agilité\"},\n        {\"name\": \"Négociation\"},\n        {\"name\": \"Prise de décision\"}\n    ]\n}\n\n# Structure the languages\nlanguages = [\n    {\"language\": \"Arabe\", \"level\": \"Native\"},\n    {\"language\": \"Français\", \"level\": \"Fluent\"},\n    {\"language\": \"Anglais\", \"level\": \"Proficient\"}\n]\n\n# Combine all data into a single JSON structure\nportfolio_data = {\n    \"personal_info\": personal_info,\n    \"education\": education,\n    \"experiences\": experiences,\n    \"certifications\": certifications,\n    \"skills\": skills,\n    \"languages\": languages,\n    \"portfolio_sections\": [\n        {\"id\": \"about\", \"title\": \"À propos\", \"description\": \"Profil et informations personnelles\"},\n        {\"id\": \"skills\", \"title\": \"Compétences\", \"description\": \"Compétences techniques et outils\"},\n        {\"id\": \"projects\", \"title\": \"Projets\", \"description\": \"Projets clés et réalisations\"},\n        {\"id\": \"resume\", \"title\": \"CV\", \"description\": \"Curriculum Vitae téléchargeable\"}\n    ]\n}\n\n# Save the JSON to a file\nwith open('/data/chats/pbwzp/workspace/portfolio_data.json', 'w', encoding='utf-8') as f:\n    json.dump(portfolio_data, f, ensure_ascii=False, indent=2)\n\nprint(\"Portfolio data successfully extracted and saved to /data/chats/pbwzp/workspace/portfolio_data.json\")",
+        "result": "\nPortfolio data successfully extracted and saved to /data/chats/pbwzp/workspace/portfolio_data.json",
+        "is_success": true,
+        "is_finished": true,
+        "assignee": "David",
+        "start_at": 1749770708.8655212,
+        "end_at": 1749770814.5244803
+      },
+      "current_task_id": "2",
+      "2": {
+        "task_id": "2",
+        "dependent_task_ids": [
+          "1"
+        ],
+        "instruction": "Create a JSON file with the structured data and save it to '/data/chats/pbwzp/workspace/portfolio_data.json'.",
+        "task_type": "other",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": true,
+        "assignee": "David",
+        "start_at": 1749770814.5308468,
+        "end_at": 1749770826.2604432
+      }
+    }
+  },
+  "gallery_last_file": {},
+  "timeline_status": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1,
+    "10": 1,
+    "11": 1,
+    "12": 1,
+    "14": 1,
+    "15": 1,
+    "16": 1,
+    "17": 1,
+    "18": 1,
+    "19": 1,
+    "20": 1,
+    "21": 1,
+    "22": 1,
+    "23": 1,
+    "24": 1,
+    "25": 1,
+    "26": 1,
+    "27": 1,
+    "28": 0,
+    "29": 1,
+    "30": 1,
+    "31": 1
+  },
+  "preview_servers": {
+    "479e88a3-d7e1-4455-a20b-93ec98df95e0": {
+      "role": "Alex",
+      "port": 5173,
+      "subdomain": "portfolio-rayan-biad-4mvt4-pbwzp-df95e0",
+      "server": "9e592a0c-f9d9-42c4-8fd4-0e11b8fb9ce3",
+      "cmd": "pnpm run dev",
+      "timeline_index": 28,
+      "status": "success",
+      "logs": []
+    }
+  },
+  "deploy": {}
+}
