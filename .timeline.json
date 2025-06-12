@@ -1,5 +1,5 @@
 {
-  "timeline_index": 31,
+  "timeline_index": 45,
   "planner": {
     "Team Leader": {
       "1": {
@@ -15,7 +15,7 @@
         "start_at": 1749770686.6524303,
         "end_at": 1749770852.0584533
       },
-      "current_task_id": "2",
+      "current_task_id": "3",
       "2": {
         "task_id": "2",
         "dependent_task_ids": [
@@ -29,7 +29,21 @@
         "is_finished": true,
         "assignee": "Alex",
         "start_at": 1749770852.0584953,
-        "end_at": 1749771113.2652528
+        "end_at": 1749771555.425024
+      },
+      "3": {
+        "task_id": "3",
+        "dependent_task_ids": [
+          "2"
+        ],
+        "instruction": "Mettre à jour le portfolio en ajoutant la photo de profil fournie par le client.",
+        "task_type": "general",
+        "code": "",
+        "result": "",
+        "is_success": false,
+        "is_finished": false,
+        "assignee": "Alex",
+        "start_at": 1749771555.42503
       }
     },
     "Data Analyst": {
@@ -95,7 +109,21 @@
     "28": 0,
     "29": 1,
     "30": 1,
-    "31": 1
+    "31": 1,
+    "32": 1,
+    "33": 1,
+    "34": 1,
+    "35": 1,
+    "36": 1,
+    "37": 1,
+    "38": 1,
+    "39": 1,
+    "40": 1,
+    "41": 1,
+    "42": 1,
+    "43": 1,
+    "44": 1,
+    "45": 1
   },
   "preview_servers": {
     "479e88a3-d7e1-4455-a20b-93ec98df95e0": {

@@ -18,8 +18,15 @@ const About = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-gray-50 rounded-lg p-6 shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Qui suis-je ?</h3>
-            <p className="text-gray-700 mb-6">{personal_info.about}</p>
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-6">
+              <div className="w-32 h-32 rounded-lg overflow-hidden flex-shrink-0 shadow-md">
+                <img src="/assets/images/profile-image.jpg" alt="Rayan Biad" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-800 mb-3">Qui suis-je ?</h3>
+                <p className="text-gray-700">{personal_info.about}</p>
+              </div>
+            </div>
             
             <div className="space-y-3">
               <div className="flex items-center">

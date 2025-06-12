@@ -39,8 +39,8 @@ const Hero = () => {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end">
             <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
               <div className="flex justify-center mb-6">
-                <div className="w-32 h-32 rounded-full bg-blue-100 flex items-center justify-center">
-                  <span className="text-5xl text-blue-700 font-bold">RB</span>
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-200">
+                  <img src="/assets/images/profile-image.jpg" alt="Rayan Biad" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="space-y-4 mb-6">
